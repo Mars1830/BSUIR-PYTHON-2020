@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+    <p>{{ 'Name: '}}{{ visitor.name }}</p>
+    <p>{{ 'Birth date: '}}{{ visitor.birth_date }}</p>
+    <p>{{ 'Passport number: '}}{{ visitor.passport_number }}</p>
+    <p>{{ 'Books: ' }}
+        {% for r in visitor.registration_set.all %}
+            {% for b in r.bookinstance_set.all %}
+                <p>{{ b }}</p>
+            {% endfor %}
+        {% endfor %}
+    </p>
+</body>
+</html>

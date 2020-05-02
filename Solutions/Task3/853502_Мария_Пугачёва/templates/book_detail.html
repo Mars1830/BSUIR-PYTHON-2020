@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIbrary</title>
+</head>
+<body>
+    <b>{{ book.name }}</b>
+    <p>{{ book.author }}</p>
+    <p>{{ 'Genre: '}}{{ book.genre }}</p><br>
+    <p>{{ 'Number: ' }}{{ book.bookinstance_set.count }}</p>
+</body>
+</html>

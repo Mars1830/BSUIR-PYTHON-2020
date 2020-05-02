@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrations</title>
+</head>
+<body>
+    {% for registration in registration_list %}
+        <p>
+            <a href="{% url 'registration-detail' registration.id%}">{{registration}}</a>
+            <button onclick="window.location.href = '{% url 'registration-del' registration.id%}'">Delete</button>
+            <button onclick="window.location.href = '{% url 'registration-upd' registration.id%}'">Update</button>
+        </p>
+    {% endfor %}
+    <button onclick="window.location.href = '{% url 'test-add'%}'">Add</button>
+</body>
+</html>

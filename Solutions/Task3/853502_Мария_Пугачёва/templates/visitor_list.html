@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+    {% for visitor in visitor_list %}
+        <p><a href="{% url 'visitor-detail' visitor.id %}">{{visitor}}</a></p>
+    {% endfor %}
+</body>
+</html>
