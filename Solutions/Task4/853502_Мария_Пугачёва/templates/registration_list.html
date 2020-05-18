@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="list">
+    <table>
+        {% for registration in registration_list %}
+            <tr>
+                <td>
+                    <a href="{% url 'registration-detail' registration.id%}">{{registration}}</a>
+                </td>
+                <td>
+                    <button onclick="window.location.href = '{% url 'registration-del' registration.id%}'">Delete</button>
+                    <button onclick="window.location.href = '{% url 'registration-upd' registration.id%}'">Update</button>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+        <button class="button" onclick="window.location.href = '{% url 'registration-add'%}'">Add</button>
+    </div>
+{% endblock content %}

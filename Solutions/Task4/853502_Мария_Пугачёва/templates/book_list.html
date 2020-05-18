@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!--<tr>
+        <td>-->
+            <div class="list">
+                {% for book in book_list %}
+                    <p><a style=width:50% href="{% url 'book-detail' book.id %}">{{book}}</a></p>
+                {% endfor %}
+                <br>
+            </div>
+        <!--</td>
+        <td>
+
+        </td>--?
+    </tr>
+
+{% endblock content %}

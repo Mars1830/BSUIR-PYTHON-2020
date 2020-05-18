@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/css/form.css' %}">
+</head>
+<body>
+<div class="sidenav">
+    <p><a href="{% url 'books' %}"  class="link">Books</a></p>
+    <p><a href="{% url 'visitors' %}" class="link">Visitors</a></p>
+    <p><a href="{% url 'registrations' %}" class="link">Registrations</a></p>
+    <p><a>______________</a></p>
+    <p><a href="{% url 'logout' %}" class = "link" >Выход</a></p>
+</div>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

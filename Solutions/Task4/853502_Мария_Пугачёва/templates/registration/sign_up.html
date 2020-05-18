@@ -1,0 +1,12 @@
+{% extends 'registration/auth_base.html' %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="formContent_wide">
+            <form action="" method="post">{% csrf_token %}
+                {{ form.as_table }}
+                <input type="submit" value="Sign up">
+            </form>
+        </div>
+    </div>
+{% endblock content %}

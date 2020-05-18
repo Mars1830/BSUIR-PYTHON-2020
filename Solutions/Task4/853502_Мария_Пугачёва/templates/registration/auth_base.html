@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/css/form.css' %}">
+    <script>
+        function SignUp() {
+            document.location="{% url 'sign-up' %}";
+        }
+        function Login() {
+            document.location="{% url 'login' %}";
+        }
+    </script>
+</head>
+<body>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="detail">
+        <p>{{ 'Visitor name: '}}{{ registration.visitor }}</p>
+        <p>{{ 'Lend date: '}}{{ registration.lend_date }}</p>
+        <p>{{ 'Return date: '}}{{ registration.return_date }}</p>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="list">
+        {% for visitor in visitor_list %}
+            <p><a href="{% url 'visitor-detail' visitor.id %}">{{visitor}}</a></p>
+        {% endfor %}
+    </div>
+
+    {% block detail %}
+    {% endblock detail %}
+
+{% endblock content %}
